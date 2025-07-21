@@ -7,7 +7,7 @@ const populationInfo = [...allElementSpan]
   .map((span) => span.textContent.replace(/[^0-9]/g, ''))
   .map((num) => Number(num));
 
-const validPopulations = populationInfo.filter((onlyNum) => !NaN(onlyNum));
+const validPopulations = populationInfo.filter((onlyNum) => !isNaN(onlyNum));
 
 const sum = validPopulations.reduce((a, b) => a + b, 0);
 const average = sum / validPopulations.length;
